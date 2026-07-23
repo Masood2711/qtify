@@ -12,7 +12,7 @@ function Section({ title, data, type }) {
                 <button className={styles.toggle} onClick={() => setShowGrid(!showGrid)}>{showGrid ? "Collapse" : "Show All"}</button>
 
             </div>
-            {showGrid && data.length > 0 && (
+            {showGrid ? (
                 <div className={styles.grid}>
                     {
                         data.map((item) => {
@@ -31,6 +31,17 @@ function Section({ title, data, type }) {
                     }
 
                 </div>
+            ) : (
+                <Carousel
+                    data={data}
+                    renderComponent={(album) => (
+                        <Card
+                            image={album.image}
+                            follows={album.follows}
+                            title={album.title}
+                        />
+                    )}
+                />
             )}
 
         </div>
