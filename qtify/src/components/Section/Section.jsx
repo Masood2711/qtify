@@ -12,7 +12,7 @@ function Section({ title, data, type }) {
                 <button className={styles.toggle} onClick={() => setShowGrid(!showGrid)}>{showGrid ? "Collapse" : "Show All"}</button>
 
             </div>
-            {showGrid && (
+            {showGrid && data.length > 0 && (
                 <div className={styles.grid}>
                     {
                         data.map((item) => {
