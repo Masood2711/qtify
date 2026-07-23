@@ -1,0 +1,26 @@
+.section {
+    padding: 32px;
+    background: var(--color-black);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.toggle {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
