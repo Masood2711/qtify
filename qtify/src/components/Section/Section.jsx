@@ -5,7 +5,7 @@ import CustomTabs from "../../Tabs/Tabs";
 import styles from "./Section.module.css";
 
 function Section({ title, data, type, genres = [] }) {
-    const [showGrid, setShowGrid] = useState(true);
+    const [showGrid, setShowGrid] = useState(false);
     const [selectedGenre, setSelectedGenre] = useState("all");
 
     const handleTabChange = (event, newValue) => {
