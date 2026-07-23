@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "../Card/Card";
 import styles from "./Section.module.css";
 
-function Section({ title, data }) {
+function Section({ title, data, type }) {
     const [showGrid, setShowGrid] = useState(true);
 
     return (
@@ -15,9 +15,17 @@ function Section({ title, data }) {
             {showGrid && (
                 <div className={styles.grid}>
                     {
-                        data.map((album) => {
+                        data.map((item) => {
                             return (
-                                <Card image={album.image} title={album.title} follows={album.follows} slug={album.slug} />
+                                <Card
+                                    key={item.id}
+                                    image={item.image}
+                                    title={item.title}
+                                    follows={item.follows}
+                                    likes={item.likes}
+                                    slug={item.slug}
+                                    type={type}
+                                />
                             )
                         })
                     }

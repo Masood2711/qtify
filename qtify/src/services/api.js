@@ -8,3 +8,13 @@ export const getTopAlbums = async () => {
     const response = await API.get("/albums/top");
     return response.data;
 };
+
+export const getNewAlbums = async () => {
+    const response = await API.get("/albums/new");
+    return response.data;
+};
+
+export const getSongs = async () => {
+    const response = await API.get("/songs");
+    return response.data;
+};
